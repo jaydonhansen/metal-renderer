@@ -1,0 +1,55 @@
+import Cocoa
+import MetalKit
+
+class ViewController: NSViewController {
+    
+    @IBOutlet var metalView: MTKView!
+    var renderer: Renderer?
+    var scene: Scene?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        renderer = Renderer(view: metalView)
+        scene = Breakout(sceneSize: metalView.bounds.size)
+        scene?.sceneDelegate = self
+        
+        renderer?.scene = scene
+        
+        metalView.device = Renderer.device
+        metalView.delegate = renderer
+        metalView.clearColor = MTLClearColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        metalView.sampleCount = 4
+        
+        let pan = NSPanGestureRecognizer(target: self, action: #selector(handlePan))
+        view.addGestureRecognizer(pan)
+        
+        let click = NSClickGestureRecognizer(target: self,
+                                             action: #selector(handleClick))
+        view.addGestureRecognizer(click)
+        
+        addKeyboardMonitoring()
+    }
+    
+    override func scrollWheel(with event: NSEvent) {
+        scene?.camera.zoom(delta: Float(event.deltaY))
+    }
+    
+    @objc func handlePan(gesture: NSPanGestureRecognizer) {
+        let translation = gesture.translation(in: gesture.view)
+        let delta = SIMD2<Float>(Float(translation.x),
+                           Float(translation.y))
+        
+        scene?.camera.rotate(delta: delta)
+        gesture.setTranslation(.zero, in: gesture.view)
+    }
+    
+}
+
+extension ViewController: SceneDelegate {
+    func transition(to scene: Scene) {
+        scene.sceneDelegate = self
+        self.scene = scene
+        renderer?.scene = scene
+    }
+}
