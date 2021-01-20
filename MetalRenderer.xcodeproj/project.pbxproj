@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		12239F322456A92D00C0FDB7 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 12239F312456A92D00C0FDB7 /* Shaders.metal */; };
 		127860B82456E5CD0009950F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127860B72456E5CD0009950F /* Extensions.swift */; };
 		127860BC245702B70009950F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127860BB245702B70009950F /* Model.swift */; };
+		12861CCA25B8EB4000E782CD /* MetalRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12861CC925B8EB4000E782CD /* MetalRendererTests.swift */; };
 		12EC2198248878E8007592B0 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 12EC2187248878E8007592B0 /* border.png */; };
 		12EC2199248878E8007592B0 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 12EC2188248878E8007592B0 /* ball.png */; };
 		12EC219A248878E8007592B0 /* paddle.obj in Resources */ = {isa = PBXBuildFile; fileRef = 12EC2189248878E8007592B0 /* paddle.obj */; };
@@ -45,10 +46,23 @@
 		7065F41C221A3D9800A858EB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065F41B221A3D9800A858EB /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		12861CCC25B8EB4000E782CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7065F400221A3D2000A858EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7065F407221A3D2000A858EB;
+			remoteInfo = MetalRenderer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		12239F312456A92D00C0FDB7 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		127860B72456E5CD0009950F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		127860BB245702B70009950F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		12861CC725B8EB4000E782CD /* MetalRendererTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalRendererTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12861CC925B8EB4000E782CD /* MetalRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRendererTests.swift; sourceTree = "<group>"; };
+		12861CCB25B8EB4000E782CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12EC2187248878E8007592B0 /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 		12EC2188248878E8007592B0 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		12EC2189248878E8007592B0 /* paddle.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = paddle.obj; sourceTree = "<group>"; };
@@ -89,6 +103,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		12861CC425B8EB4000E782CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7065F405221A3D2000A858EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,6 +131,15 @@
 				12F41BF42487C3E800CD8CA6 /* treefir.obj */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		12861CC825B8EB4000E782CD /* MetalRendererTests */ = {
+			isa = PBXGroup;
+			children = (
+				12861CC925B8EB4000E782CD /* MetalRendererTests.swift */,
+				12861CCB25B8EB4000E782CD /* Info.plist */,
+			);
+			path = MetalRendererTests;
 			sourceTree = "<group>";
 		};
 		12EC2186248878E8007592B0 /* Game Models */ = {
@@ -159,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				7065F40A221A3D2000A858EB /* MetalRenderer */,
+				12861CC825B8EB4000E782CD /* MetalRendererTests */,
 				7065F409221A3D2000A858EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				7065F408221A3D2000A858EB /* MetalRenderer.app */,
+				12861CC725B8EB4000E782CD /* MetalRendererTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +228,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		12861CC625B8EB4000E782CD /* MetalRendererTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12861CCE25B8EB4000E782CD /* Build configuration list for PBXNativeTarget "MetalRendererTests" */;
+			buildPhases = (
+				12861CC325B8EB4000E782CD /* Sources */,
+				12861CC425B8EB4000E782CD /* Frameworks */,
+				12861CC525B8EB4000E782CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12861CCD25B8EB4000E782CD /* PBXTargetDependency */,
+			);
+			name = MetalRendererTests;
+			productName = MetalRendererTests;
+			productReference = 12861CC725B8EB4000E782CD /* MetalRendererTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7065F407221A3D2000A858EB /* MetalRenderer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7065F418221A3D2100A858EB /* Build configuration list for PBXNativeTarget "MetalRenderer" */;
@@ -219,10 +269,14 @@
 		7065F400221A3D2000A858EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = jaydonhansen;
 				TargetAttributes = {
+					12861CC625B8EB4000E782CD = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 7065F407221A3D2000A858EB;
+					};
 					7065F407221A3D2000A858EB = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1140;
@@ -230,7 +284,7 @@
 				};
 			};
 			buildConfigurationList = 7065F403221A3D2000A858EB /* Build configuration list for PBXProject "MetalRenderer" */;
-			compatibilityVersion = "Xcode 11.4";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -243,11 +297,19 @@
 			projectRoot = "";
 			targets = (
 				7065F407221A3D2000A858EB /* MetalRenderer */,
+				12861CC625B8EB4000E782CD /* MetalRendererTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		12861CC525B8EB4000E782CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7065F406221A3D2000A858EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +339,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		12861CC325B8EB4000E782CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12861CCA25B8EB4000E782CD /* MetalRendererTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7065F404221A3D2000A858EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +373,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		12861CCD25B8EB4000E782CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7065F407221A3D2000A858EB /* MetalRenderer */;
+			targetProxy = 12861CCC25B8EB4000E782CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		7065F411221A3D2100A858EB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -315,6 +393,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		12861CCF25B8EB4000E782CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MetalRendererTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaydonhansen.MetalRendererTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalRenderer.app/Contents/MacOS/MetalRenderer";
+			};
+			name = Debug;
+		};
+		12861CD025B8EB4000E782CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MetalRendererTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaydonhansen.MetalRendererTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalRenderer.app/Contents/MacOS/MetalRenderer";
+			};
+			name = Release;
+		};
 		7065F416221A3D2100A858EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +595,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12861CCE25B8EB4000E782CD /* Build configuration list for PBXNativeTarget "MetalRendererTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12861CCF25B8EB4000E782CD /* Debug */,
+				12861CD025B8EB4000E782CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7065F403221A3D2000A858EB /* Build configuration list for PBXProject "MetalRenderer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

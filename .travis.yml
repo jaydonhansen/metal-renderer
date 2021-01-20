@@ -1,5 +1,5 @@
 language: swift
 osx_image: xcode12.2
 xcode_project: MetalRenderer.xcodeproj # path to your xcodeproj folder
-xcode_scheme: MetalRenderer
+xcode_scheme: MetalRendererTests
 xcode_destination: platform=macOS
