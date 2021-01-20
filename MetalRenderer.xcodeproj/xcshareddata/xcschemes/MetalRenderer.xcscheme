@@ -20,6 +20,20 @@
                ReferencedContainer = "container:MetalRenderer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "12861CC625B8EB4000E782CD"
+               BuildableName = "MetalRendererTests.xctest"
+               BlueprintName = "MetalRendererTests"
+               ReferencedContainer = "container:MetalRenderer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
